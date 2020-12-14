@@ -1,11 +1,7 @@
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let videosJSON = try? newJSONDecoder().decode(VideosJSON.self, from: jsonData)
+
 
 import Foundation
 
-// MARK: - VideosJSONElement
 class VideosJSONElement: Codable {
     let title: String
     let nodes: [Node]
@@ -22,7 +18,6 @@ class VideosJSONElement: Codable {
     
 }
 
-// MARK: - Node
 class Node: Codable {
     let video: Video
 
@@ -31,7 +26,6 @@ class Node: Codable {
     }
 }
 
-// MARK: - Video
 class Video: Codable {
     let encodeURL: String
 
