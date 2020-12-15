@@ -3,6 +3,9 @@
 //
 //   let videosJSON = try? newJSONDecoder().decode(VideosJSON.self, from: jsonData)
 
+
+//This is Serializer class
+
 import Foundation
 
 // MARK: - VideosJSONElement

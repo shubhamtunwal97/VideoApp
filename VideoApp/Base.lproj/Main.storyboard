@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17105.1"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -21,11 +22,6 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="388" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bof-ma-nQd">
                                 <rect key="frame" x="0.0" y="101" width="414" height="795"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="bof-ma-nQd" secondAttribute="height" multiplier="138:265" id="QRu-C8-l4D"/>
-                                    <constraint firstAttribute="height" constant="795" id="YKZ-ft-0VJ"/>
-                                    <constraint firstAttribute="width" constant="414" id="r1k-Vw-BYi"/>
-                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="categoriesCell" rowHeight="388" id="9Zn-Ve-DyN" customClass="CategoriesVideoCell" customModule="VideoApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="388"/>
@@ -106,8 +102,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vot-el-w90">
-                                <rect key="frame" x="166" y="54" width="82" height="29"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dco-L8-k5F">
+                                <rect key="frame" x="166" y="44" width="82" height="29"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -116,13 +112,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Vot-el-w90" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="HqO-am-nS7"/>
-                            <constraint firstItem="Vot-el-w90" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="166" id="JKu-gO-TBk"/>
-                            <constraint firstItem="bof-ma-nQd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="UiQ-44-THJ"/>
-                            <constraint firstItem="bof-ma-nQd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cjM-Gw-cgX"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vot-el-w90" secondAttribute="trailing" constant="166" id="hwn-Fa-lAc"/>
-                            <constraint firstItem="bof-ma-nQd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="i4i-aw-qKD"/>
-                            <constraint firstAttribute="bottom" secondItem="bof-ma-nQd" secondAttribute="bottom" id="igk-mn-dNS"/>
+                            <constraint firstItem="Dco-L8-k5F" firstAttribute="centerX" secondItem="bof-ma-nQd" secondAttribute="centerX" id="0SM-gv-CIU"/>
+                            <constraint firstItem="bof-ma-nQd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="97g-38-RZe"/>
+                            <constraint firstItem="Dco-L8-k5F" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="IGg-6d-QMZ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="bof-ma-nQd" secondAttribute="bottom" constant="-34" id="Khh-nz-QQO"/>
+                            <constraint firstItem="bof-ma-nQd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NGJ-OI-ahJ"/>
+                            <constraint firstItem="bof-ma-nQd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="abv-mO-qzW"/>
                         </constraints>
                     </view>
                     <connections>
@@ -143,30 +138,39 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jz-Mg-m5C" customClass="VideoView" customModule="VideoApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="439" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ll3-LE-Ave">
+                                        <rect key="frame" x="41" y="71" width="45" height="43"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="43" id="CAL-hm-gqh"/>
+                                            <constraint firstAttribute="width" secondItem="ll3-LE-Ave" secondAttribute="height" multiplier="19:20" constant="4.1499999999999986" id="NKd-1e-Zi4"/>
+                                            <constraint firstAttribute="width" constant="45" id="c5Q-aE-zbk"/>
+                                        </constraints>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <state key="normal">
+                                            <imageReference key="image" image="chevron.backward.circle" catalog="system" symbolScale="large"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="back:" destination="CNH-h1-5fG" eventType="touchUpInside" id="wm3-WR-bkw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="ll3-LE-Ave" firstAttribute="top" secondItem="1jz-Mg-m5C" secondAttribute="top" constant="71" id="X6X-Q2-qB3"/>
+                                    <constraint firstItem="ll3-LE-Ave" firstAttribute="leading" secondItem="1jz-Mg-m5C" secondAttribute="leading" constant="41" id="iwS-M7-8Ol"/>
+                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ll3-LE-Ave">
-                                <rect key="frame" x="26" y="44" width="38" height="40"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" image="chevron.backward.circle" catalog="system"/>
-                                <connections>
-                                    <action selector="back:" destination="CNH-h1-5fG" eventType="touchUpInside" id="wm3-WR-bkw"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="afg-OG-gnv"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="ll3-LE-Ave" firstAttribute="leading" secondItem="afg-OG-gnv" secondAttribute="leading" constant="26" id="4OT-oC-XuX"/>
                             <constraint firstItem="1jz-Mg-m5C" firstAttribute="centerY" secondItem="rw1-3x-gBu" secondAttribute="centerY" id="7DG-zx-EXD"/>
                             <constraint firstItem="1jz-Mg-m5C" firstAttribute="leading" secondItem="afg-OG-gnv" secondAttribute="leading" id="8xx-Qg-97I"/>
                             <constraint firstItem="1jz-Mg-m5C" firstAttribute="top" secondItem="rw1-3x-gBu" secondAttribute="topMargin" constant="-44" id="9Un-Ux-YJi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1jz-Mg-m5C" secondAttribute="trailing" constant="-45" id="9zd-2R-DK1"/>
-                            <constraint firstItem="afg-OG-gnv" firstAttribute="trailing" secondItem="ll3-LE-Ave" secondAttribute="trailing" constant="350" id="Kf6-xN-bBN"/>
-                            <constraint firstItem="ll3-LE-Ave" firstAttribute="top" secondItem="afg-OG-gnv" secondAttribute="top" id="Q2g-ES-sp9"/>
-                            <constraint firstItem="afg-OG-gnv" firstAttribute="bottom" secondItem="ll3-LE-Ave" secondAttribute="bottom" constant="778" id="k9d-Gs-9b7"/>
                         </constraints>
                     </view>
                     <connections>

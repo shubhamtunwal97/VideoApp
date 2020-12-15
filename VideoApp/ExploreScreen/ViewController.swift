@@ -58,6 +58,3 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
     
 }
 
-
-//scaliblity
-//object reusablity
