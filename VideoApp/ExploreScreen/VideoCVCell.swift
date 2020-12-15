@@ -13,5 +13,7 @@ class VideoCVCell: UICollectionViewCell {
     var vidUrl:String?
     @IBOutlet weak var imgThumbnail: UIImageView!
     
-    
+    override func prepareForReuse() {
+        imgThumbnail.image = UIImage(named: "camera")
+    }
 }

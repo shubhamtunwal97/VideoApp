@@ -38,12 +38,14 @@ class CategoriesVideoCell: UITableViewCell,UICollectionViewDelegate,UICollection
         var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "videoCell", for:indexPath) as! VideoCVCell
 
         
-        if let thumbnailImage = getThumbnailImage(forUrl: URL(string:  videos![indexPath.row].video.encodeURL)!) {
-
-
-            cell.imgThumbnail.image = thumbnailImage
-           
+        var url = videos![indexPath.row].video.encodeURL
+        
+        AVAsset(url: URL(string: url)!).generateThumbnail { [weak self] (image) in
+            DispatchQueue.main.async {
+                guard let image = image else { return }
+                cell.imgThumbnail.image = image
             }
+        }
         
         return cell
     }

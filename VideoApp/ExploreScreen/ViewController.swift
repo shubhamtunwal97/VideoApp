@@ -45,7 +45,6 @@ class ViewController: UIViewController,UITableViewDataSource,UITableViewDelegate
         cell.videos = videosList![indexPath.row].nodes
         cell.position = indexPath.row
         cell.categoryTitle.text  = videosList![indexPath.row].title
-        
 
         cell.videosCollectionView.reloadData()
         cell.sceneContext = self

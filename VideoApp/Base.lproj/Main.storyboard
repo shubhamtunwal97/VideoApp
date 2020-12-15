@@ -53,13 +53,13 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="173" height="304"/>
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
-                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VT0-Rk-U7Y" customClass="CardView" customModule="VideoApp" customModuleProvider="target">
-                                                                        <rect key="frame" x="-23" y="-10" width="188" height="304"/>
-                                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VT0-Rk-U7Y" customClass="CardView" customModule="VideoApp" customModuleProvider="target">
+                                                                        <rect key="frame" x="4" y="6" width="165" height="298"/>
+                                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <color key="tintColor" systemColor="systemGray6Color"/>
                                                                         <userDefinedRuntimeAttributes>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                                <real key="value" value="10"/>
+                                                                                <real key="value" value="4"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                             <userDefinedRuntimeAttribute type="number" keyPath="shadowOffsetWidth">
                                                                                 <integer key="value" value="0"/>
@@ -71,11 +71,17 @@
                                                                                 <real key="value" value="1"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                             <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
-                                                                                <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                <color key="value" systemColor="systemGray5Color"/>
                                                                             </userDefinedRuntimeAttribute>
                                                                         </userDefinedRuntimeAttributes>
                                                                     </imageView>
                                                                 </subviews>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="bottom" secondItem="VT0-Rk-U7Y" secondAttribute="bottom" id="DAw-SN-JVd"/>
+                                                                    <constraint firstItem="VT0-Rk-U7Y" firstAttribute="trailing" secondItem="GXo-Wi-sXB" secondAttribute="trailingMargin" constant="4" id="OU0-1R-ugN"/>
+                                                                    <constraint firstItem="VT0-Rk-U7Y" firstAttribute="leading" secondItem="GXo-Wi-sXB" secondAttribute="leading" constant="4" id="iM7-rD-HwH"/>
+                                                                    <constraint firstItem="VT0-Rk-U7Y" firstAttribute="top" secondItem="GXo-Wi-sXB" secondAttribute="top" constant="6" id="k5N-GO-uKl"/>
+                                                                </constraints>
                                                             </collectionViewCellContentView>
                                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <size key="customSize" width="173" height="304"/>
@@ -138,39 +144,33 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jz-Mg-m5C" customClass="VideoView" customModule="VideoApp" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="439" height="896"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ll3-LE-Ave">
-                                        <rect key="frame" x="41" y="71" width="45" height="43"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="43" id="CAL-hm-gqh"/>
-                                            <constraint firstAttribute="width" secondItem="ll3-LE-Ave" secondAttribute="height" multiplier="19:20" constant="4.1499999999999986" id="NKd-1e-Zi4"/>
-                                            <constraint firstAttribute="width" constant="45" id="c5Q-aE-zbk"/>
-                                        </constraints>
-                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal">
-                                            <imageReference key="image" image="chevron.backward.circle" catalog="system" symbolScale="large"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="back:" destination="CNH-h1-5fG" eventType="touchUpInside" id="wm3-WR-bkw"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstItem="ll3-LE-Ave" firstAttribute="top" secondItem="1jz-Mg-m5C" secondAttribute="top" constant="71" id="X6X-Q2-qB3"/>
-                                    <constraint firstItem="ll3-LE-Ave" firstAttribute="leading" secondItem="1jz-Mg-m5C" secondAttribute="leading" constant="41" id="iwS-M7-8Ol"/>
-                                </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFW-iK-KMz">
+                                <rect key="frame" x="25" y="52" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="B9h-KV-Hhg"/>
+                                    <constraint firstAttribute="height" constant="50" id="Wsa-9h-1Cm"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="chevron.backward.circle" catalog="system" symbolScale="large"/>
+                                </state>
+                                <connections>
+                                    <action selector="back:" destination="CNH-h1-5fG" eventType="touchUpInside" id="dhC-Q9-Srh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="afg-OG-gnv"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <gestureRecognizers/>
                         <constraints>
+                            <constraint firstItem="rFW-iK-KMz" firstAttribute="leading" secondItem="afg-OG-gnv" secondAttribute="leading" constant="25" id="2pz-Zq-lrc"/>
                             <constraint firstItem="1jz-Mg-m5C" firstAttribute="centerY" secondItem="rw1-3x-gBu" secondAttribute="centerY" id="7DG-zx-EXD"/>
                             <constraint firstItem="1jz-Mg-m5C" firstAttribute="leading" secondItem="afg-OG-gnv" secondAttribute="leading" id="8xx-Qg-97I"/>
                             <constraint firstItem="1jz-Mg-m5C" firstAttribute="top" secondItem="rw1-3x-gBu" secondAttribute="topMargin" constant="-44" id="9Un-Ux-YJi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="1jz-Mg-m5C" secondAttribute="trailing" constant="-45" id="9zd-2R-DK1"/>
+                            <constraint firstItem="rFW-iK-KMz" firstAttribute="top" secondItem="afg-OG-gnv" secondAttribute="top" constant="8" id="hSw-Hp-LJS"/>
                         </constraints>
                     </view>
                     <connections>
@@ -187,8 +187,11 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
